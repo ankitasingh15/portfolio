@@ -1,14 +1,14 @@
 :root {
-  --foreground: #141f4e;
-  --muted: #58517d;
-  --ink: #111945;
-  --paper: #f3efff;
-  --panel: rgba(250, 247, 255, 0.54);
-  --glass-line: rgba(255, 255, 255, 0.68);
-  --navy: #141f4e;
-  --blue: #5b55b8;
+  --foreground: #16224f;
+  --muted: #4d5887;
+  --ink: #0f1b44;
+  --paper: #eef3ff;
+  --panel: rgba(244, 248, 255, 0.5);
+  --glass-line: rgba(255, 255, 255, 0.65);
+  --navy: #16224f;
+  --blue: #2e46a6;
   --gold: #e7cd8f;
-  --shadow: 0 14px 44px rgba(58, 45, 118, 0.16);
+  --shadow: 0 10px 36px rgba(22, 41, 102, 0.14);
 }
 
 * {
@@ -35,11 +35,11 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(42rem 42rem at 6% 6%, #ded5ff 0%, transparent 48%),
-    radial-gradient(40rem 40rem at 94% 4%, #efe3ff 0%, transparent 46%),
-    radial-gradient(44rem 44rem at 90% 96%, #d6ccff 0%, transparent 46%),
-    radial-gradient(38rem 38rem at 8% 96%, #f0dfff 0%, transparent 48%),
-    linear-gradient(135deg, #f9f6ff 0%, #f3efff 50%, #f7f2ff 100%);
+    radial-gradient(42rem 42rem at 6% 6%, #c4d2ff 0%, transparent 48%),
+    radial-gradient(40rem 40rem at 94% 4%, #d6e2ff 0%, transparent 46%),
+    radial-gradient(44rem 44rem at 90% 96%, #c0d0ff 0%, transparent 46%),
+    radial-gradient(38rem 38rem at 8% 96%, #cdd9ff 0%, transparent 48%),
+    linear-gradient(135deg, #f0f4ff 0%, #eef3ff 50%, #f5f8ff 100%);
 }
 
 a {
@@ -69,17 +69,17 @@ h3 {
 }
 
 .glass-soft {
-  background: rgba(230, 220, 255, 0.38);
+  background: rgba(210, 224, 255, 0.34);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 6px 24px rgba(58, 45, 118, 0.1);
+  box-shadow: 0 6px 24px rgba(22, 41, 102, 0.1);
   backdrop-filter: blur(16px) saturate(150%);
 }
 
 .glass-tint {
   color: #fff;
-  background: linear-gradient(135deg, rgba(20, 31, 78, 0.74), rgba(93, 78, 170, 0.5));
+  background: linear-gradient(135deg, rgba(18, 33, 86, 0.66), rgba(46, 70, 150, 0.46));
   border: 1px solid rgba(255, 255, 255, 0.34);
-  box-shadow: 0 12px 40px rgba(58, 45, 118, 0.24);
+  box-shadow: 0 12px 40px rgba(22, 41, 102, 0.24);
   backdrop-filter: blur(18px) saturate(160%);
 }
 
@@ -163,13 +163,14 @@ h3 {
 
 .script-line,
 .script-note {
-  margin-bottom: 10px;
+  margin-bottom: 0;
   color: var(--ink);
-  font-family: "Archivo Black", sans-serif;
-  font-size: clamp(1rem, 2.4vw, 1.55rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
+  font-family: "Pinyon Script", cursive;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 h1 {
@@ -178,7 +179,7 @@ h1 {
   font-size: clamp(2.55rem, 6.4vw, 5.25rem);
   line-height: 0.92;
   letter-spacing: -0.03em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .role-line {
@@ -326,13 +327,25 @@ h1 {
   text-transform: uppercase;
 }
 
-.section-heading h2 {
-  margin: 0;
+.section-heading p {
+  margin-bottom: 0;
+  color: var(--ink);
   font-family: "Archivo Black", sans-serif;
-  font-size: clamp(2.25rem, 6vw, 4.1rem);
+  font-size: clamp(2.55rem, 6.4vw, 4.8rem);
   line-height: 0.95;
   letter-spacing: -0.03em;
-  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--muted);
+  font-family: "Pinyon Script", cursive;
+  font-size: clamp(2.35rem, 5.8vw, 3.8rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .statement {
@@ -503,7 +516,7 @@ h1 {
   font-size: clamp(1.85rem, 4.5vw, 3.2rem);
   line-height: 1;
   letter-spacing: -0.03em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .case-layout {
