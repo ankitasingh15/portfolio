@@ -82,7 +82,7 @@ const caseStudies = [
     number: "02",
     company: "Personal Project",
     title: "AI-enabled movie discovery platform",
-    cover: { value: "0→1", label: "Concept to launch" },
+    cover: { value: "0-to-1", label: "Concept to launch" },
     summary:
       "Created and launched a curated movie discovery platform using customer journey mapping, AI, ML, and vector database workflows.",
     overview: [
@@ -91,7 +91,7 @@ const caseStudies = [
       "Built a polished foundation for deeper future case-study metrics and product learning notes.",
     ],
     stats: [
-      ["0→1", "product launch"],
+      ["0-to-1", "product launch"],
       ["ML", "recommendations"],
       ["Vector DB", "semantic search"],
     ],
@@ -185,7 +185,7 @@ function Hero() {
       <div className="wrap">
         <div className="hero-card glass">
           <div className="hero-copy">
-            <span className="pill glass-soft">Product Portfolio · 2026</span>
+            <span className="pill glass-soft">Product Portfolio | 2026</span>
             <p className="script-line">Hi there, I&apos;m</p>
             <h1 id="hero-title">Ankita Singh</h1>
             <p className="role-line">Lead Product Manager</p>
@@ -201,7 +201,7 @@ function Hero() {
                 Resume
               </a>
               <a className="button glass" href={github}>
-                GitHub ↗
+                GitHub
               </a>
             </div>
             <p className="location-line">Bentonville, Arkansas</p>
