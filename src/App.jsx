@@ -231,7 +231,7 @@ function Profile() {
     <section className="content-section" id="profile" data-section="profile">
       <div className="wrap two-column">
         <div>
-          <SectionHeading eyebrow="About Me" title="The short version" />
+          <SectionHeading eyebrow="About Me" title="The Short Version" />
           <div className="statement">
             <p>
               Ankita is a strategic, cross-functional product and program executive with 15+ years of experience
@@ -269,7 +269,7 @@ function Impact() {
   return (
     <section className="content-section" id="impact" data-section="impact">
       <div className="wrap">
-        <SectionHeading eyebrow="Skills & Credentials" title="What I bring" />
+        <SectionHeading eyebrow="Skills & Credentials" title="What I Bring" />
         <div className="skills-impact-grid">
           <div className="capability-grid">
             {capabilities.map((capability) => (
@@ -298,8 +298,7 @@ function CaseStudies() {
     <section className="content-section" id="case-studies" data-section="case-studies">
       <div className="wrap">
         <div className="section-row">
-          <SectionHeading eyebrow="Selected Work" title="Case studies" />
-          <p className="script-note">case studies</p>
+          <SectionHeading eyebrow="Selected Work" title="Case Studies" />
         </div>
 
         <div className="case-stack">
@@ -352,7 +351,7 @@ function Beyond() {
   return (
     <section className="content-section" id="beyond" data-section="beyond">
       <div className="wrap">
-        <SectionHeading eyebrow="Beyond Product" title="Credentials, interests, and leadership signals." />
+        <SectionHeading eyebrow="Beyond Product" title="Credentials, Interests, and Leadership Signals." />
         <div className="beyond-grid">
           {beyondItems.map((item) => (
             <article className="glass" key={item.title}>
