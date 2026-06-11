@@ -113,7 +113,7 @@ const beyondItems = [
   {
     title: "Global leadership",
     body:
-      "Experienced in onshore/offshore workforce management, cross-cultural collaboration, mentoring PMs and engineers, and deploying products across international markets.",
+      "Experienced in onshore/offshore workforce management, cross-cultural collaboration, parllalley, mentoring PMs and engineers, and deploying products across international markets. Managing complex products with empathy.",
   },
 ];
 
