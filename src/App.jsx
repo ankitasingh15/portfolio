@@ -67,16 +67,19 @@ const certifications = [
   },
 ];
 
-const toolkit = [
-  "Python",
-  "SQL",
-  "Gen AI / LLMs",
-  "ML Pipelines",
-  "Copilot",
-  "Claude",
-  "OpenAI",
-  "Figma",
-  "SAFe / Agile",
+const capabilities = [
+  "Product Strategy & Vision",
+  "Customer Discovery & User Research",
+  "Roadmap Ownership & Prioritization",
+  "Stakeholder Alignment & Executive Communication",
+  "Cross-Functional Leadership",
+  "Execution & Program Delivery",
+  "Data-Driven Product Management",
+  "Global Platform Delivery",
+  "GenAI & ML Product Innovation",
+  "Legacy Modernization & Digital Transformation",
+  "Business Process Transformation",
+  "Enterprise Product Adoption & Change Management",
 ];
 
 const work = [
@@ -333,10 +336,9 @@ function Skills() {
           </ul>
         </div>
 
-        <div className="toolkit-grid">
-          {toolkit.map((item) => (
-            <div className="glass tool-card" key={item}>
-              <Icon name={toolIcon(item)} />
+        <div className="capability-grid">
+          {capabilities.map((item) => (
+            <div className="glass capability-tile" key={item}>
               <span>{item}</span>
             </div>
           ))}
@@ -503,14 +505,6 @@ function Social({ href, name, invert = false }) {
       <Icon name={name} />
     </a>
   );
-}
-
-function toolIcon(item) {
-  if (item.includes("SQL")) return "database";
-  if (item.includes("Gen") || item.includes("OpenAI") || item.includes("Claude")) return "brain";
-  if (item.includes("ML")) return "workflow";
-  if (item.includes("SAFe")) return "refresh";
-  return "spark";
 }
 
 function Icon({ name }) {
