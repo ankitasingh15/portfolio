@@ -16,8 +16,8 @@ const profile = {
 };
 
 const about = [
-  "I'm a strategic, cross-functional Product and Program leader who turns ambiguous, enterprise-scale problems into measurable outcomes. Over 10+ years I've steered business transformations, machine-learning solutions, and global platform integrations across Fortune 500 ecosystems - most recently as Senior Product Manager at Walmart.",
-  "I pair deep technical acumen with financial savvy and an integrative leadership style that harmonizes complex data systems with core business performance - building first-time-right solutions and mobilizing cross-cultural global teams.",
+  "Highly strategic, cross-functional Product and Program Executive.",
+  "A rare blend of technical acumen, Product expertise, and an integrative leadership style that harmonizes complex data systems with core business performance. Proven history of building First-time-right solutions.",
 ];
 
 const heroStats = [
@@ -151,6 +151,7 @@ const work = [
 const experience = [
   {
     period: "2023 - 2026",
+    location: "Bentonville, AR",
     role: "Senior Product Manager",
     company: "Walmart",
     note:
@@ -158,6 +159,7 @@ const experience = [
   },
   {
     period: "2015 - 2023",
+    location: "Bentonville, AR",
     role: "Manager, Walmart Product",
     company: "Cognizant Technology Solutions",
     note:
@@ -165,6 +167,7 @@ const experience = [
   },
   {
     period: "2007 - 2015",
+    location: "India",
     role: "Techno-Functional Lead & Engineer",
     company: "Ford - Sun Life - Mahindra Satyam",
     note:
@@ -438,7 +441,10 @@ function Experience() {
         <div className="glass experience-list">
           {experience.map((job) => (
             <div className="experience-row" key={job.period}>
-              <p>{job.period}</p>
+              <p>
+                <span>{job.period}</span>
+                <small>{job.location}</small>
+              </p>
               <div>
                 <h3>{job.role}</h3>
                 <strong>{job.company}</strong>
