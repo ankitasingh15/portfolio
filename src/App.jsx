@@ -5,7 +5,7 @@ const profile = {
   first: "Ankita",
   role: "Lead Product Manager",
   tagline:
-    "I turn ambiguous, enterprise-scale problems into measurable outcomes - most recently driving 98% ML forecast accuracy and $3M+ in savings at Walmart.",
+    "Highly strategic, cross-functional Product and Program Executive A rare blend of technical acumen, Product expertise, and an integrative leadership style that harmonizes complex data systems with core business performance. Proven history of building First-time-right solutions.",
   location: "Bentonville, Arkansas",
   email: "ankita15leo@gmail.com",
   phone: "(479) 544-3699",
@@ -250,7 +250,6 @@ function Hero() {
               <img src={assetUrl("ankita-professional.jpg")} alt={`${profile.name} - ${profile.role}`} />
               <div className="portrait-overlay">
                 <span>Enterprise product leader</span>
-                <strong>AI, ML and platform products</strong>
               </div>
             </div>
           </div>
@@ -484,7 +483,6 @@ function Footer() {
     <footer className="site-footer">
       <div className="wrap">
         <span>Copyright {profile.year} {profile.name}</span>
-        <span>Built with React and Vite</span>
       </div>
     </footer>
   );
