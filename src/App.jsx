@@ -106,7 +106,7 @@ const beyondItems = [
   {
     title: "Professional development",
     body:
-      "AI Product Management Certification from AI Product Academy, Maven; Software Processes and Agile Practices from University of Alberta; SAFe Product Owner/Product Manager and SAFe Practitioner.",
+      "AI Product Management Certification from AI Product Academy, Maven; Software Processes and Agile Practices from University of Alberta; SAFe Product Owner/Product Manager; SAFe Practitioner.",
   },
   {
     title: "Areas of interest",
