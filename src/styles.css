@@ -9,6 +9,9 @@
   --panel-soft: rgba(255, 255, 255, 0.34);
   --line: rgba(255, 255, 255, 0.64);
   --shadow: 0 10px 36px rgba(40, 83, 65, 0.14);
+  --parallax-hero: 0px;
+  --parallax-stats: 0px;
+  --parallax-lift: 0px;
 }
 
 * {
@@ -194,6 +197,8 @@ ul {
   align-items: center;
   padding: clamp(2rem, 5vw, 3rem);
   border-radius: 2.5rem;
+  transform: translate3d(0, var(--parallax-hero), 0);
+  will-change: transform;
 }
 
 .hero-copy {
@@ -296,6 +301,8 @@ h1 {
   width: min(100%, 22rem);
   margin: 0 auto;
   aspect-ratio: 4 / 5;
+  transform: translate3d(0, var(--parallax-lift), 0);
+  will-change: transform;
 }
 
 .portrait-glow {
@@ -329,16 +336,20 @@ h1 {
   position: absolute;
   inset-inline: 0.85rem;
   bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
   border-radius: 1.25rem;
   color: #fff;
   background: rgba(15, 27, 68, 0.58);
   backdrop-filter: blur(16px);
+  text-align: center;
 }
 
 .portrait-overlay span {
   display: block;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0;
   color: rgba(255, 255, 255, 0.72);
   font-size: 0.68rem;
   font-weight: 800;
@@ -359,6 +370,8 @@ h1 {
   margin-top: 1.5rem;
   overflow: hidden;
   border-radius: 1.5rem;
+  transform: translate3d(0, var(--parallax-stats), 0);
+  will-change: transform;
 }
 
 .stats-grid div,
@@ -406,9 +419,9 @@ h1 {
 }
 
 .section-title h2 {
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2.875rem, 6.7vw, 5.875rem);
   line-height: 0.96;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .section-title p {
@@ -459,6 +472,7 @@ h1 {
   display: flex;
   gap: 0.75rem;
   margin-top: 1.5rem;
+  align-items: center;
 }
 
 .social-link {
@@ -662,7 +676,7 @@ h1 {
 }
 
 .work-item h3 {
-  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  font-size: clamp(2.125rem, 4.8vw, 4.375rem);
   line-height: 1;
 }
 
@@ -857,9 +871,23 @@ h1 {
 .contact-card h2 {
   margin-top: 0.5rem;
   color: var(--ink);
-  font-size: clamp(3.2rem, 8vw, 7.5rem);
+  font-size: clamp(2.95rem, 7.55vw, 7.25rem);
   line-height: 0.9;
-  text-transform: uppercase;
+  text-transform: none;
+}
+
+.contact-card .social-row {
+  align-items: center;
+}
+
+.contact-card .social-link {
+  width: 3rem;
+  height: 3rem;
+}
+
+.contact-card .social-link svg {
+  width: 20px;
+  height: 20px;
 }
 
 .contact-email {
@@ -1049,7 +1077,7 @@ h1 {
   }
 
   .section-title h2 {
-    font-size: clamp(2.3rem, 14vw, 3.4rem);
+    font-size: clamp(2.175rem, 13.5vw, 3.275rem);
   }
 
   .section-title p {

@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 const profile = {
@@ -176,6 +178,32 @@ const experience = [
 ];
 
 function App() {
+  useEffect(() => {
+    let frame = 0;
+
+    const updateParallax = () => {
+      const scrollY = window.scrollY || 0;
+      document.documentElement.style.setProperty("--parallax-hero", `${scrollY * -0.0045}px`);
+      document.documentElement.style.setProperty("--parallax-stats", `${scrollY * -0.002}px`);
+      document.documentElement.style.setProperty("--parallax-lift", `${scrollY * -0.028}px`);
+      frame = 0;
+    };
+
+    const onScroll = () => {
+      if (!frame) {
+        frame = window.requestAnimationFrame(updateParallax);
+      }
+    };
+
+    updateParallax();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
+
   return (
     <div className="app-shell">
       <Header />
