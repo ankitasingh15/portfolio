@@ -161,7 +161,7 @@ const experience = [
     period: "2015 - 2023",
     location: "Bentonville, AR",
     role: "Manager, Walmart Product",
-    company: "Cognizant Technology Solutions",
+    company: "Cognizant Technology Solutions US Corp",
     note:
       "$80M+ portfolio over four years. Global real-estate rollouts & legacy migrations. Bronze & Gold award recipient.",
   },
@@ -169,7 +169,7 @@ const experience = [
     period: "2007 - 2015",
     location: "India",
     role: "Techno-Functional Lead & Engineer",
-    company: "Ford - Sun Life - Mahindra Satyam",
+    company: "Cognizant India - Ford - Sun Life - Mahindra Satyam",
     note:
       "Built and supported enterprise systems, translating ambiguous requirements into scalable workflows.",
   },
@@ -247,7 +247,7 @@ function Hero() {
           <div className="portrait-wrap" aria-label={`${profile.name} portrait and leadership summary`}>
             <div className="portrait-glow" />
             <div className="glass portrait-card animate-floaty">
-              <img src={assetUrl("ankita.png")} alt={`${profile.name} - ${profile.role}`} />
+              <img src={assetUrl("ankita-professional.jpg")} alt={`${profile.name} - ${profile.role}`} />
               <div className="portrait-overlay">
                 <span>Enterprise product leader</span>
                 <strong>AI, ML and platform products</strong>

@@ -94,10 +94,10 @@ ul {
 }
 
 .glass-dark {
-  color: #fff;
-  background: rgba(15, 27, 68, 0.62);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 10px 40px rgba(15, 27, 68, 0.26);
+  color: var(--ink);
+  background: linear-gradient(135deg, rgba(216, 232, 220, 0.76), rgba(237, 245, 239, 0.7));
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  box-shadow: 0 10px 40px rgba(61, 106, 84, 0.18);
   backdrop-filter: blur(22px) saturate(160%);
   -webkit-backdrop-filter: blur(22px) saturate(160%);
 }
@@ -309,6 +309,7 @@ h1 {
   overflow: hidden;
   padding: 0.4rem;
   border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.92);
   animation: floaty 6s ease-in-out infinite;
 }
 
@@ -317,7 +318,7 @@ h1 {
   height: 100%;
   border-radius: 1.65rem;
   object-fit: cover;
-  object-position: top;
+  object-position: center top;
 }
 
 .portrait-overlay {
@@ -524,6 +525,7 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(20rem, 1fr);
   gap: clamp(3rem, 6vw, 4rem);
+  align-items: end;
 }
 
 .cert-list {
@@ -577,8 +579,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
-  align-self: start;
-  margin-top: calc(clamp(3rem, 7vw, 6rem) + 2.5rem);
+  align-self: end;
 }
 
 .capability-tile {
@@ -846,12 +847,12 @@ h1 {
 }
 
 .contact-card .script-title {
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--muted);
 }
 
 .contact-card h2 {
   margin-top: 0.5rem;
-  color: #fff;
+  color: var(--ink);
   font-size: clamp(3.2rem, 8vw, 7.5rem);
   line-height: 0.9;
   text-transform: uppercase;
