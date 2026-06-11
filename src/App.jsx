@@ -27,15 +27,18 @@ const glance = [
 ];
 
 const capabilities = [
-  "Product strategy",
-  "Customer discovery",
-  "Roadmap ownership",
-  "Stakeholder alignment",
-  "Execution leadership",
-  "Outcome measurement",
-  "GenAI and ML prototyping",
-  "Global platform delivery",
-  "Legacy modernization",
+  "Product Strategy & Vision",
+  "Customer Discovery & User Research",
+  "Roadmap Ownership & Prioritization",
+  "Stakeholder Alignment & Executive Communication",
+  "Cross-Functional Leadership",
+  "Execution & Program Delivery",
+  "Data-Driven Product Management",
+  "Global Platform Delivery",
+  "GenAI & ML Product Innovation",
+  "Legacy Modernization & Digital Transformation",
+  "Business Process Transformation",
+  "Enterprise Product Adoption & Change Management",
 ];
 
 const stories = [
