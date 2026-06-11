@@ -1,222 +1,256 @@
-import { useEffect, useMemo, useState } from "react";
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`;
 
-const resumeUrl = `${import.meta.env.BASE_URL}assets/Ankita-Singh-Resume.pdf`;
-const email = "ankita15leo@gmail.com";
-const linkedin = "https://www.linkedin.com/in/ankita15singh/";
-const github = "https://github.com/ankitasingh15";
+const profile = {
+  name: "Ankita Singh",
+  first: "Ankita",
+  role: "Lead Product Manager",
+  tagline:
+    "I turn ambiguous, enterprise-scale problems into measurable outcomes - most recently driving 98% ML forecast accuracy and $3M+ in savings at Walmart.",
+  location: "Bentonville, Arkansas",
+  email: "ankita15leo@gmail.com",
+  phone: "(479) 544-3699",
+  linkedin: "https://www.linkedin.com/in/ankita15singh/",
+  github: "https://github.com/ankitasingh15",
+  resume: assetUrl("assets/Ankita-Singh-Resume.pdf"),
+  year: "2026",
+};
 
-const sections = [
-  { id: "profile", label: "About" },
-  { id: "impact", label: "Impact" },
-  { id: "case-studies", label: "Work" },
-  { id: "beyond", label: "Beyond" },
+const about = [
+  "I'm a strategic, cross-functional Product and Program leader who turns ambiguous, enterprise-scale problems into measurable outcomes. Over 10+ years I've steered business transformations, machine-learning solutions, and global platform integrations across Fortune 500 ecosystems - most recently as Senior Product Manager at Walmart.",
+  "I pair deep technical acumen with financial savvy and an integrative leadership style that harmonizes complex data systems with core business performance - building first-time-right solutions and mobilizing cross-cultural global teams.",
 ];
 
 const heroStats = [
-  { value: "15+", label: "Years across product, program, and engineering" },
-  { value: "$80M+", label: "Four-year enterprise portfolio impact" },
-  { value: "98%", label: "Forecasting accuracy across planning initiatives" },
+  { value: "10+", label: "Years in product & program" },
+  { value: "$80M+", label: "4-year portfolio impact" },
+  { value: "98%", label: "ML forecast accuracy" },
 ];
 
 const glance = [
-  ["Based in", "Bentonville, Arkansas"],
-  ["Focus", "AI, ML and enterprise platforms"],
-  ["Next role", "Lead Product Manager"],
-  ["Languages", "English and Hindi"],
-  ["Credentials", "AI PM, SAFe POPM, Agile Practices"],
+  { k: "Based in", v: "Bentonville, Arkansas" },
+  { k: "Focus", v: "AI, ML & platform products" },
+  { k: "Experience", v: "10+ years" },
+  { k: "Languages", v: "English & Hindi" },
+  { k: "Status", v: "Open to senior roles" },
 ];
 
-const capabilities = [
-  "Product Strategy & Vision",
-  "Customer Discovery & User Research",
-  "Roadmap Ownership & Prioritization",
-  "Stakeholder Alignment & Executive Communication",
-  "Cross-Functional Leadership",
-  "Execution & Program Delivery",
-  "Data-Driven Product Management",
-  "Global Platform Delivery",
-  "GenAI & ML Product Innovation",
-  "Legacy Modernization & Digital Transformation",
-  "Business Process Transformation",
-  "Enterprise Product Adoption & Change Management",
-];
-
-const stories = [
+const certifications = [
   {
-    kicker: "$80M+",
-    title: "Enterprise portfolio impact",
-    body:
-      "Steered parallel execution of three high-stakes enterprise products at Cognizant supporting Walmart, creating $13M in first-year operational savings and $80M+ over four years.",
+    title: "AI Product Management",
+    by: "AI Product Academy - Maven",
+    year: "2026",
+    logo: assetUrl("logos/maven.png"),
   },
   {
-    kicker: "$2M+",
-    title: "Legacy platform decommissioning",
-    body:
-      "Mapped dependencies across nine applications, aligned business, engineering, and data teams, and retired a legacy Merch Planner platform while protecting continuity.",
+    title: "Software Processes & Agile Practices",
+    by: "University of Alberta",
+    year: "2024",
+    logo: assetUrl("logos/ualberta.png"),
   },
   {
-    kicker: "98%",
-    title: "AI and ML planning outcomes",
-    body:
-      "Used GenAI, LLMs, and machine learning approaches to accelerate discovery, improve efficiency, and strengthen enterprise forecasting performance.",
+    title: "Intro to Software Product Management",
+    by: "University of Alberta",
+    year: "2024",
+    logo: assetUrl("logos/ualberta.png"),
+  },
+  {
+    title: "SAFe Product Owner / Manager (5.0)",
+    by: "Scaled Agile",
+    year: "2020",
+    logo: assetUrl("logos/scaledagile.png"),
+  },
+  {
+    title: "SAFe Practitioner",
+    by: "Scaled Agile",
+    year: "2018",
+    logo: assetUrl("logos/scaledagile.png"),
   },
 ];
 
-const caseStudies = [
+const toolkit = [
+  "Python",
+  "SQL",
+  "Gen AI / LLMs",
+  "ML Pipelines",
+  "Copilot",
+  "Claude",
+  "OpenAI",
+  "Figma",
+  "SAFe / Agile",
+];
+
+const work = [
   {
-    number: "01",
     company: "Walmart",
-    title: "Connected Forecasting and platform modernization",
-    cover: { value: "98%", label: "Forecast accuracy" },
+    title: "Connected Forecasting (F1)",
+    url: "",
+    image: "",
+    cover: { value: "98%", label: "Forecast Accuracy" },
+    tint: "glass-navy",
     summary:
-      "Led product discovery, KPI definition, roadmap prioritization, and platform enhancements for customer-focused enterprise planning experiences.",
+      "Led data-science forecast generation and pipeline development for the U.S. market - from ML strategy through enterprise adoption.",
     overview: [
-      "Partnered with engineering, finance, data, and business stakeholders to improve reliability and operational performance.",
-      "Designed scalable data architecture and workflow enhancements that supported long-term platform flexibility.",
-      "Improved user adoption by 20% through workflow optimization and cross-functional change management.",
+      "Architected automated ML models and end-to-end data pipelines feeding predictive metrics into the central F1 application.",
+      "Led migration & decommissioning of legacy systems - offboarding 'Merch Planner' and onboarding nine business divisions.",
+      "Launched self-service capabilities to track, audit, and modify forecasts across matrixed finance organizations.",
     ],
     stats: [
-      ["98%", "forecast accuracy"],
-      ["+20%", "user adoption"],
-      ["9", "apps mapped"],
+      { value: "98%", label: "forecast accuracy" },
+      { value: "$3M+", label: "annual savings" },
+      { value: "+20%", label: "adoption" },
     ],
+    tags: ["ML Forecasting", "Platform Strategy"],
   },
   {
-    number: "02",
-    company: "Personal Project",
-    title: "AI-enabled movie discovery platform",
-    cover: { value: "0-to-1", label: "Concept to launch" },
+    company: "Cognizant - Walmart",
+    title: "Enterprise Product Portfolio",
+    url: "",
+    image: "",
+    cover: { value: "$80M+", label: "4-yr portfolio impact" },
+    tint: "glass-blue",
     summary:
-      "Created and launched a curated movie discovery platform using customer journey mapping, AI, ML, and vector database workflows.",
+      "Steered parallel execution of three high-stakes enterprise products and a global real-estate platform across seven markets.",
     overview: [
-      "Led the product from concept through launch with a focus on taste-based discovery and recommendation quality.",
-      "Used semantic matching and AI-assisted workflows to reduce noise in movie selection.",
-      "Built a polished foundation for deeper future case-study metrics and product learning notes.",
+      "Built a real-estate ML tool analyzing thousands of vendor proposals and invoices, flagging incorrect claims at scale.",
+      "Directed the high-risk DCS2K legacy migration across an onshore-offshore matrix with a zero-backout deployment.",
+      "Designed multi-tenant architecture and role-based security standardizing folders across UK, Japan, Canada, US & South America.",
     ],
     stats: [
-      ["0-to-1", "product launch"],
-      ["ML", "recommendations"],
-      ["Vector DB", "semantic search"],
+      { value: "$13M", label: "first-year savings" },
+      { value: "7", label: "global markets" },
+      { value: "-20%", label: "delivery effort" },
     ],
-    link: "https://flixkeep.com",
+    tags: ["Portfolio Leadership", "Global Delivery"],
+  },
+  {
+    company: "Personal Project",
+    title: "AI Movie Discovery Platform",
+    url: "https://flixkeep.com",
+    image: assetUrl("flixkeep.png"),
+    cover: { value: "0-to-1", label: "Concept to launch" },
+    tint: "glass-navy",
+    summary:
+      "A taste-based movie discovery platform. Built end-to-end to surface films that match your taste, with no noise.",
+    overview: [
+      "Designed and shipped the full product solo: taste onboarding, recommendations, and discovery UX.",
+      "Built semantic search and a 'taste DNA' match score using ML, LLMs, and a vector database.",
+      "Generates a personalized 'why this film' rationale for every recommendation.",
+    ],
+    stats: [
+      { value: "0-to-1", label: "concept to launch" },
+      { value: "Vector DB", label: "semantic search" },
+      { value: "LLM", label: "taste matching" },
+    ],
+    tags: ["0-to-1", "Gen AI", "Vector DB"],
   },
 ];
 
-const beyondItems = [
+const experience = [
   {
-    title: "Professional development",
-    body:
-      "AI Product Management Certification from AI Product Academy, Maven; Software Processes and Agile Practices from University of Alberta; SAFe Product Owner/Product Manager; SAFe Practitioner.",
+    period: "2023 - 2026",
+    role: "Senior Product Manager",
+    company: "Walmart",
+    note:
+      "Lead PM for enterprise forecasting. 98% ML accuracy, $3M+ savings, nine divisions migrated onto F1.",
   },
   {
-    title: "Areas of interest",
-    body:
-      "Generative AI, LLM frameworks, agent orchestration, machine learning, data pipelines, rapid prototyping, customer journeys, and enterprise platform modernization.",
+    period: "2015 - 2023",
+    role: "Manager, Walmart Product",
+    company: "Cognizant Technology Solutions",
+    note:
+      "$80M+ portfolio over four years. Global real-estate rollouts & legacy migrations. Bronze & Gold award recipient.",
   },
   {
-    title: "Global leadership",
-    body:
-      "Experienced in onshore/offshore workforce management, cross-cultural collaboration, parllalley, mentoring PMs and engineers, and deploying products across international markets. Managing complex products with empathy.",
+    period: "2007 - 2015",
+    role: "Techno-Functional Lead & Engineer",
+    company: "Ford - Sun Life - Mahindra Satyam",
+    note:
+      "Built and supported enterprise systems, translating ambiguous requirements into scalable workflows.",
   },
 ];
 
 function App() {
-  const sectionIds = useMemo(() => sections.map((section) => section.id), []);
-  const [activeSection, setActiveSection] = useState(sectionIds[0]);
-
-  useEffect(() => {
-    const observedSections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-        if (visible) {
-          setActiveSection(visible.target.id);
-        }
-      },
-      { rootMargin: "-36% 0px -46% 0px", threshold: [0.12, 0.24, 0.4] }
-    );
-
-    observedSections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
-  }, [sectionIds]);
-
   return (
-    <>
-      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
-      <main id="top">
+    <div className="app-shell">
+      <Header />
+      <main>
         <Hero />
-        <Profile />
-        <Impact />
-        <CaseStudies />
-        <Beyond />
+        <About />
+        <Skills />
+        <Work />
+        <Experience />
+        <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
-function Header({ activeSection, setActiveSection }) {
+function Header() {
   return (
-    <div className="site-header-wrap">
-      <header className="site-header glass">
-        <a className="mobile-brand" href="#top">
-          Ankita Singh
-        </a>
-        <nav aria-label="Primary navigation">
-          {sections.map((section) => (
-            <a
-              key={section.id}
-              className={activeSection === section.id ? "active" : ""}
-              href={`#${section.id}`}
-              onClick={() => setActiveSection(section.id)}
-            >
-              {section.label}
-            </a>
-          ))}
-        </nav>
-      </header>
+    <div className="header-shell">
+      <div className="wrap">
+        <header className="glass site-header">
+          <a className="brand" href="#top">
+            {profile.name}
+          </a>
+          <nav aria-label="Primary navigation">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <span aria-hidden="true">ooo</span>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div className="mobile-nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </header>
+      </div>
     </div>
   );
 }
 
 function Hero() {
   return (
-    <section className="hero" aria-labelledby="hero-title">
+    <section id="top" className="hero-section">
       <div className="wrap">
-        <div className="hero-card glass">
+        <div className="glass hero-card animate-fade-up">
           <div className="hero-copy">
-            <span className="pill glass-soft">Product Portfolio | 2026</span>
-            <p className="script-line">Hi there, I&apos;m</p>
-            <h1 id="hero-title">Ankita Singh</h1>
-            <p className="role-line">Lead Product Manager</p>
-            <p className="hero-lede">
-              I turn ambiguous, enterprise-scale product problems into measurable outcomes across AI-enabled platforms,
-              forecasting systems, and global product transformations.
-            </p>
-            <div className="hero-actions" aria-label="Primary actions">
-              <a className="button primary" href="#case-studies">
+            <span className="glass-soft pill">Product Portfolio - {profile.year}</span>
+            <p className="script-title">Hi there, I&apos;m</p>
+            <h1>{profile.name}</h1>
+            <p className="role-line">{profile.role}</p>
+            <p className="hero-lede">{profile.tagline}</p>
+            <div className="hero-actions">
+              <a className="button primary" href="#work">
                 See my work
               </a>
-              <a className="button glass" href={resumeUrl} download>
+              <a className="button glass" href={profile.resume} target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
-              <a className="button glass" href={github}>
+              <a className="button glass" href={profile.github} target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
             </div>
-            <p className="location-line">Bentonville, Arkansas</p>
+            <p className="location-line">{profile.location}</p>
           </div>
-          <aside className="portrait-card glass-tint">
-            <span className="portrait-kicker">Enterprise product leader</span>
-            <strong>AI, ML and platform products</strong>
-            <p>Strategy, discovery, roadmaps, stakeholder alignment, and global execution.</p>
-          </aside>
+
+          <div className="portrait-wrap" aria-label={`${profile.name} portrait and leadership summary`}>
+            <div className="portrait-glow" />
+            <div className="glass portrait-card animate-floaty">
+              <img src={assetUrl("ankita.png")} alt={`${profile.name} - ${profile.role}`} />
+              <div className="portrait-overlay">
+                <span>Enterprise product leader</span>
+                <strong>AI, ML and platform products</strong>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <dl className="stats-grid glass">
+        <dl className="glass stats-grid animate-fade-up">
           {heroStats.map((stat) => (
             <div key={stat.label}>
               <dt>{stat.value}</dt>
@@ -229,36 +263,44 @@ function Hero() {
   );
 }
 
-function Profile() {
+function About() {
   return (
-    <section className="content-section" id="profile" data-section="profile">
-      <div className="wrap two-column">
+    <section id="about" className="content-section">
+      <div className="wrap about-grid">
         <div>
-          <SectionHeading eyebrow="About Me" title="The Short Version" />
-          <div className="statement">
-            <p>
-              Ankita is a strategic, cross-functional product and program executive with 15+ years of experience
-              steering enterprise-scale transformations, machine learning solutions, and global platform integrations.
-            </p>
-            <p>
-              She combines technical depth, financial judgment, and an integrative leadership style that connects
-              complex data systems with core business performance.
-            </p>
+          <SectionTitle title="About Me" script="the short version" />
+          <div className="copy-stack">
+            {about.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
-          <div className="contact-stack">
-            <h3>Let&apos;s connect</h3>
-            <a href={`mailto:${email}`}>{email}</a>
-            <a href={linkedin}>LinkedIn</a>
+
+          <h3 className="connect-title">Let&apos;s connect!</h3>
+          <div className="contact-links">
+            <a href={`mailto:${profile.email}`}>
+              <Icon name="mail" />
+              {profile.email}
+            </a>
+            <a href={`tel:${profile.phone.replace(/[^0-9]/g, "")}`}>
+              <Icon name="phone" />
+              {profile.phone}
+            </a>
+          </div>
+
+          <div className="social-row">
+            <Social href={profile.linkedin} name="linkedin" />
+            <Social href={profile.github} name="github" />
+            <Social href={`mailto:${profile.email}`} name="mail" />
           </div>
         </div>
 
-        <aside className="glance-card glass">
-          <p className="card-kicker">At a glance</p>
+        <aside className="glass glance-card">
+          <p className="eyebrow">At a glance</p>
           <dl>
-            {glance.map(([key, value]) => (
-              <div key={key}>
-                <dt>{key}</dt>
-                <dd>{value}</dd>
+            {glance.map((item) => (
+              <div key={item.k}>
+                <dt>{item.k}</dt>
+                <dd>{item.v}</dd>
               </div>
             ))}
           </dl>
@@ -268,77 +310,110 @@ function Profile() {
   );
 }
 
-function Impact() {
+function Skills() {
   return (
-    <section className="content-section" id="impact" data-section="impact">
-      <div className="wrap">
-        <SectionHeading eyebrow="Skills & Credentials" title="What I Bring" />
-        <div className="skills-impact-grid">
-          <div className="capability-grid">
-            {capabilities.map((capability) => (
-              <div className="glass skill-tile" key={capability}>
-                <span>{capability}</span>
-              </div>
+    <section id="skills" className="content-section">
+      <div className="wrap skills-grid">
+        <div>
+          <SectionTitle title="Skills & Credentials" script="what I bring" />
+          <ul className="cert-list">
+            {certifications.map((cert) => (
+              <li className="glass cert-card" key={`${cert.title}-${cert.year}`}>
+                <span className="logo-box">
+                  <img src={cert.logo} alt={cert.by} />
+                </span>
+                <div>
+                  <p>{cert.title}</p>
+                  <span>
+                    {cert.by} - {cert.year}
+                  </span>
+                </div>
+              </li>
             ))}
-          </div>
-          <div className="story-stack">
-            {stories.map((story) => (
-              <article className="story-card glass" key={story.title}>
-                <span>{story.kicker}</span>
-                <h3>{story.title}</h3>
-                <p>{story.body}</p>
-              </article>
-            ))}
-          </div>
+          </ul>
+        </div>
+
+        <div className="toolkit-grid">
+          {toolkit.map((item) => (
+            <div className="glass tool-card" key={item}>
+              <Icon name={toolIcon(item)} />
+              <span>{item}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-function CaseStudies() {
+function Work() {
   return (
-    <section className="content-section" id="case-studies" data-section="case-studies">
+    <section id="work" className="content-section">
       <div className="wrap">
         <div className="section-row">
-          <SectionHeading eyebrow="Selected Work" title="Case Studies" />
+          <SectionTitle title="Selected Work" script="case studies" />
         </div>
 
-        <div className="case-stack">
-          {caseStudies.map((study) => (
-            <article className="case-study" key={study.title}>
-              <div className="case-meta">
+        <div className="work-stack">
+          {work.map((item, index) => (
+            <article key={item.title} className="work-item">
+              <div className="work-meta">
                 <p>
-                  {study.number} / {study.company}
+                  {String(index + 1).padStart(2, "0")} / {item.company}
                 </p>
-                {study.link ? (
-                  <a href={study.link} target="_blank" rel="noopener noreferrer">
-                    Visit ↗
-                  </a>
-                ) : null}
-              </div>
-              <h3>{study.title}</h3>
-              <div className="case-layout">
-                <div className="case-cover glass-tint">
-                  <p>{study.company}</p>
-                  <strong>{study.cover.value}</strong>
-                  <span>{study.cover.label}</span>
+                <div className="tag-row">
+                  {item.tags.map((tag) => (
+                    <span className="glass tag" key={tag}>
+                      {tag}
+                    </span>
+                  ))}
+                  {item.url ? (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="visit-link">
+                      Visit
+                    </a>
+                  ) : null}
                 </div>
-                <div className="case-panel glass">
-                  <p>{study.summary}</p>
-                  <span className="card-kicker">Project overview</span>
+              </div>
+
+              <h3>{item.title}</h3>
+
+              <div className="work-layout">
+                {item.image ? (
+                  <div className="image-cover">
+                    <img src={item.image} alt={`${item.title} preview`} />
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                      flixkeep.com
+                    </a>
+                  </div>
+                ) : (
+                  <div className={`glass-tint ${item.tint} metric-cover`}>
+                    <p>{item.company}</p>
+                    <div>
+                      <strong>{item.cover.value}</strong>
+                      <span>{item.cover.label}</span>
+                    </div>
+                  </div>
+                )}
+
+                <div className="glass overview-card">
+                  <p>{item.summary}</p>
+                  <span className="eyebrow">Project overview</span>
                   <ul>
-                    {study.overview.map((item) => (
-                      <li key={item}>{item}</li>
+                    {item.overview.map((point) => (
+                      <li key={point}>
+                        <span />
+                        {point}
+                      </li>
                     ))}
                   </ul>
                 </div>
               </div>
-              <dl className="case-stats glass">
-                {study.stats.map(([value, label]) => (
-                  <div key={label}>
-                    <dt>{value}</dt>
-                    <dd>{label}</dd>
+
+              <dl className="glass work-stats">
+                {item.stats.map((stat) => (
+                  <div key={stat.label}>
+                    <dt>{stat.value}</dt>
+                    <dd>{stat.label}</dd>
                   </div>
                 ))}
               </dl>
@@ -350,17 +425,24 @@ function CaseStudies() {
   );
 }
 
-function Beyond() {
+function Experience() {
   return (
-    <section className="content-section" id="beyond" data-section="beyond">
+    <section className="content-section">
       <div className="wrap">
-        <SectionHeading eyebrow="Beyond Product" title="Credentials, Interests, and Leadership Signals." />
-        <div className="beyond-grid">
-          {beyondItems.map((item) => (
-            <article className="glass" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </article>
+        <div className="section-row">
+          <SectionTitle title="Experience" script="the journey" />
+        </div>
+
+        <div className="glass experience-list">
+          {experience.map((job) => (
+            <div className="experience-row" key={job.period}>
+              <p>{job.period}</p>
+              <div>
+                <h3>{job.role}</h3>
+                <strong>{job.company}</strong>
+                <span>{job.note}</span>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -368,22 +450,149 @@ function Beyond() {
   );
 }
 
-function SectionHeading({ eyebrow, title }) {
+function Contact() {
   return (
-    <div className="section-heading">
-      <p>{eyebrow}</p>
-      <h2>{title}</h2>
-    </div>
+    <section id="contact" className="contact-section">
+      <div className="wrap">
+        <div className="glass-dark contact-card">
+          <p className="script-title">let&apos;s work together</p>
+          <h2>Get In Touch</h2>
+          <a className="contact-email" href={`mailto:${profile.email}`}>
+            {profile.email}
+          </a>
+          <div className="social-row inverted">
+            <Social href={profile.linkedin} name="linkedin" invert />
+            <Social href={profile.github} name="github" invert />
+            <Social href={`mailto:${profile.email}`} name="mail" invert />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
 function Footer() {
   return (
-    <footer className="site-footer wrap">
-      <span>© 2026 Ankita Singh</span>
-      <span>Built with React and Vite</span>
+    <footer className="site-footer">
+      <div className="wrap">
+        <span>Copyright {profile.year} {profile.name}</span>
+        <span>Built with React and Vite</span>
+      </div>
     </footer>
   );
+}
+
+function SectionTitle({ title, script }) {
+  return (
+    <div className="section-title">
+      <h2>{title}</h2>
+      <p>{script}</p>
+    </div>
+  );
+}
+
+function Social({ href, name, invert = false }) {
+  return (
+    <a
+      href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel="noopener noreferrer"
+      aria-label={name}
+      className={`social-link${invert ? " invert" : ""}`}
+    >
+      <Icon name={name} />
+    </a>
+  );
+}
+
+function toolIcon(item) {
+  if (item.includes("SQL")) return "database";
+  if (item.includes("Gen") || item.includes("OpenAI") || item.includes("Claude")) return "brain";
+  if (item.includes("ML")) return "workflow";
+  if (item.includes("SAFe")) return "refresh";
+  return "spark";
+}
+
+function Icon({ name }) {
+  const common = {
+    width: 18,
+    height: 18,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.8,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+  };
+
+  switch (name) {
+    case "mail":
+      return (
+        <svg {...common} aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="m2 7 10 6 10-6" />
+        </svg>
+      );
+    case "phone":
+      return (
+        <svg {...common} aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" />
+        </svg>
+      );
+    case "linkedin":
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM0 8h5v16H0V8Zm7.5 0h4.8v2.2h.07c.67-1.2 2.3-2.46 4.73-2.46 5.3 0 6.9 2.36 6.9 6.56V24h-5v-8.6c0-2.05-.04-4.7-2.86-4.7-2.86 0-3.3 2.23-3.3 4.55V24h-5V8Z" />
+        </svg>
+      );
+    case "github":
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.78-1.34-1.78-1.1-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5Z" />
+        </svg>
+      );
+    case "database":
+      return (
+        <svg {...common} aria-hidden="true">
+          <ellipse cx="12" cy="5" rx="8" ry="3" />
+          <path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5" />
+          <path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" />
+        </svg>
+      );
+    case "brain":
+      return (
+        <svg {...common} aria-hidden="true">
+          <path d="M9 3a3 3 0 0 0-3 3v1a4 4 0 0 0-2 7.5V17a4 4 0 0 0 5 3.9" />
+          <path d="M15 3a3 3 0 0 1 3 3v1a4 4 0 0 1 2 7.5V17a4 4 0 0 1-5 3.9" />
+          <path d="M9 3v18" />
+          <path d="M15 3v18" />
+        </svg>
+      );
+    case "workflow":
+      return (
+        <svg {...common} aria-hidden="true">
+          <rect x="3" y="4" width="6" height="6" rx="1" />
+          <rect x="15" y="14" width="6" height="6" rx="1" />
+          <path d="M9 7h4a5 5 0 0 1 5 5v2" />
+          <path d="M15 17h-4a5 5 0 0 1-5-5v-2" />
+        </svg>
+      );
+    case "refresh":
+      return (
+        <svg {...common} aria-hidden="true">
+          <path d="M21 12a9 9 0 0 1-15.5 6.2" />
+          <path d="M3 12A9 9 0 0 1 18.5 5.8" />
+          <path d="M18 2v4h4" />
+          <path d="M6 22v-4H2" />
+        </svg>
+      );
+    default:
+      return (
+        <svg {...common} aria-hidden="true">
+          <path d="m12 3 1.8 5.5H20l-5 3.6 1.9 5.9-4.9-3.7L7.1 18 9 12.1 4 8.5h6.2L12 3Z" />
+        </svg>
+      );
+  }
 }
 
 export default App;
