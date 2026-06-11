@@ -89,7 +89,7 @@ const work = [
     url: "",
     image: "",
     cover: { value: "98%", label: "Forecast Accuracy" },
-    tint: "glass-navy",
+    tint: "glass-sage",
     summary:
       "Led data-science forecast generation and pipeline development for the U.S. market - from ML strategy through enterprise adoption.",
     overview: [

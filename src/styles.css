@@ -114,6 +114,10 @@ ul {
   background: linear-gradient(135deg, rgba(18, 33, 86, 0.68), rgba(54, 88, 116, 0.42));
 }
 
+.glass-sage {
+  background: linear-gradient(135deg, rgba(79, 139, 112, 0.72), rgba(185, 212, 194, 0.54));
+}
+
 .glass-blue {
   background: linear-gradient(135deg, rgba(51, 98, 77, 0.66), rgba(134, 170, 147, 0.46));
 }
