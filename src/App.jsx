@@ -383,7 +383,7 @@ function Work() {
     <section id="work" className="content-section">
       <div className="wrap">
         <div className="section-row">
-          <SectionTitle title="Selected Work" script="case studies" />
+          <SectionTitle title="Selected Work" script="success stories" />
         </div>
 
         <div className="work-stack">
